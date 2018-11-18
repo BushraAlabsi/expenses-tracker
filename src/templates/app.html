@@ -2,11 +2,11 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <add/>
+      <add ng-show="$ctrl.add"/>
     </div>
   </nav>
-  <button>Get Track</button>
-  <select ng-model= "$ctrl.category">
+  <button ng-show="$ctrl.add" ng-click= "$ctrl.add= false" >Get Track</button>
+  <select ng-model= "$ctrl.category" ng-show="!$ctrl.add && $ctrl.first" ng-click= "$ctrl.first= false">
     <option value="Housing">Housing</option>
       <option value="Taxes">Taxes</option>
       <option value="Entertainment">Entertainment</option>
@@ -14,7 +14,7 @@
       <option value="Electricity & water fees">Electricity & water fees</option>
   </select>
   
-    <div class="col-md-5">
+    <div ng-show="!$ctrl.add && !$ctrl.first" >
       <list category="$ctrl.category"/>
     </div>
 </div>

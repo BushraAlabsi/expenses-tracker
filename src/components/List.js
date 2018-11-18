@@ -5,7 +5,7 @@ angular.module('expenses-tracker')
    var req = {
      method: 'GET',
      url: `/subtotal/${month}/${this.category}`
- 	}
+ 	  }
 
    $http(req).then((data)=>{
    	this.subtotal = data.data;
