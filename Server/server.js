@@ -2,8 +2,8 @@ var express = require('express');
 var db = require('./db');
 
 // Middleware
-var morgan = require('morgan');
 var parser = require('body-parser');
+var path =require('path');
 
 // Router
 var router = require('./routes.js');
@@ -14,15 +14,17 @@ module.exports.app = app;
 // Set what we are listening on.
 app.set('port', 3000);
 
-// Logging and parsing
-// app.use(morgan('dev'));
+// parsing
 app.use(parser.json());
 app.use(parser.urlencoded({extended:true}))
 // Set up our routes
-app.use('/', router); ///////////////3adli Hai
+app.use('/', router); 
 
-// Serve the client files
-// app.use(express.static(__dirname + '/../client'));
+//Serve the client files
+app.use(express.static(path.join(__dirname , '../')));
+app.get('/', function (req, res) {
+	res.render("index");	
+});
 
 // If we are being run directly, run the server.
 if (!module.parent) {

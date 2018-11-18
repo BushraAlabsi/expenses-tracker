@@ -2,7 +2,8 @@ var db = require('../db');
 
 module.exports = {
     subtotal: (req, res) => {
-     db.expenses.sum('amount', { where: { category: req.params.category , month:req.params.month } })
+     db.expenses.sum('amount', { where: { category: req.params.category , 
+      month:req.params.month } })
      .then(sum => {
       res.json(sum);
 })
@@ -18,7 +19,7 @@ module.exports = {
         category: req.body.category,
         month: req.body.month}).
       then(resutl => {
-        res.sendStatus(201);
+       res.sendStatus(201);
       });
     }
   

@@ -1,0 +1,17 @@
+
+<div class="search-bar form-inline">
+  month <input type="text" placeholder= "month" ng-model="$ctrl.month"><br>
+
+  amount <input type="text" placeholder= "amount" ng-model="$ctrl.amount">
+	<select ng-model= "$ctrl.category">
+ 		<option value="Housing">Housing</option>
+  		<option value="Taxes">Taxes</option>
+  		<option value="Entertainment">Entertainment</option>
+  		<option value="Repair & maintainance">Repair & maintainance</option>
+  		<option value="Electricity & water fees">Electricity & water fees</option>
+	</select>
+	<button ng-click="$ctrl.handleClick()" >Add</button>
+	
+	<p>Total</p><input type="text" value = {{$ctrl.total}} >	
+	
+</div>
