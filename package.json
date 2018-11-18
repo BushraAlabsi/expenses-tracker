@@ -1,0 +1,28 @@
+{
+  "name": "expenses-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BushraAlabsi/expenses-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BushraAlabsi/expenses-tracker/issues"
+  },
+  "homepage": "https://github.com/BushraAlabsi/expenses-tracker#readme",
+  "dependencies": {
+    "angular": "^1.6",
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "morgan": "^1.4.1",
+    "mysql": "^2.16.0",
+    "request": "^2.69.0",
+    "sequelize": "^3.21.0"
+  }
+}
